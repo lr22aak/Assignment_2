@@ -234,7 +234,7 @@ barPlot(data_mortality.data_countries(),
         "Mortality rate, neonatal (per 1,000 live births)")
 
 # =============================================================================
-# invoking bar plot function
+# invoking pie plot function
 # expected values to pass dataFrame, county list, title, year to plot data
 # =============================================================================
 piePlot(data_co2.data_countries(), 
