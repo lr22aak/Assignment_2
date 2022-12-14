@@ -147,6 +147,7 @@ def barPlot(data, countries, years, Title):
               label= years, 
               kind = "bar", title = Title)
     plt.title(Title, size = 35) # setting title for plot and its size
+    plt.grid() # applying grid for the plot to refere the values
     plt.savefig(imageName) # to save the plots
     plt.show() # to display the plots
     
@@ -211,10 +212,11 @@ mpl.rcParams['font.size'] = 25
 # invoking line plot function
 # expected values to pass dataFrame, county list, title
 # =============================================================================
+# line plot for CO2 emissions
 linePlot(data_co2.data_years(),
           county_list, 
           "CO2 emissions (kt)")
-
+# line plot for Energy use
 linePlot(data_energy.data_years(), 
           county_list, 
           "Energy use (kg of oil equivalent per capita)")
@@ -223,11 +225,12 @@ linePlot(data_energy.data_years(),
 # invoking bar plot function
 # expected values to pass dataFrame, county list, years list, title
 # =============================================================================
+# bar plot for Total greenhouse gas emissions
 barPlot(data_greenhouse_gas.data_countries(), 
         county_list, 
         years_list,
         "Total greenhouse gas emissions (kt of CO2 equivalent)")
-
+# bar plot for Mortality rate, neonatal
 barPlot(data_mortality.data_countries(), 
         county_list, 
         years_list,
@@ -237,11 +240,12 @@ barPlot(data_mortality.data_countries(),
 # invoking pie plot function
 # expected values to pass dataFrame, county list, title, year to plot data
 # =============================================================================
+# pie plot for the year 2005
 piePlot(data_co2.data_countries(), 
         county_list,
         "CO2 emissions (kt)", 
         "2005")
-
+# pie plot for the year 2014
 piePlot(data_co2.data_countries(), 
         county_list,
         "CO2 emissions (kt)", 
